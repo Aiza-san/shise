@@ -1,0 +1,32 @@
+{
+	"name": "@shise/cors",
+	"version": "0.0.1",
+	"description": "Shise CORS",
+	"keywords": [
+		"cors",
+		"shise-cors",
+		"shise",
+		"@shise/cors"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aiza-san/shise.git"
+	},
+	"author": "Aizawa-san <aizawa.dev@gmail.com>",
+	"license": "MIT",
+	"homepage": "https://aiza-san.github.io/shise-docs/",
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+		"build": "tsup src/index.ts --format cjs,esm --dts --minify terser",
+		"prepublishOnly": "npm run build"
+	},
+	"peerDependencies": {
+		"shise": ">=0.0.1"
+	}
+}

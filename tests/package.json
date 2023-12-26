@@ -1,0 +1,9 @@
+{
+	"name": "@shise/tests",
+	"scripts": {
+		"dev": "ts-node-dev src/index.ts"
+	},
+	"dependencies": {
+		"ts-node-dev": "^2.0.0"
+	}
+}

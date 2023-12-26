@@ -1,0 +1,36 @@
+{
+	"name": "@shise/assets",
+	"version": "0.0.1",
+	"description": "Serve static files with shise",
+	"keywords": [
+		"assets",
+		"shise-assets",
+		"shise",
+		"@shise/assets"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aiza-san/shise.git"
+	},
+	"author": "Aizawa-san <aizawa.dev@gmail.com>",
+	"license": "MIT",
+	"homepage": "https://aiza-san.github.io/shise-docs/",
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+		"build": "tsup src/index.ts --format cjs,esm --dts --minify terser",
+		"prepublishOnly": "npm run build"
+	},
+	"peerDependencies": {
+		"shise": ">=0.0.1"
+	},
+	"devDependencies": {
+		"@types/mime-types": "^2.1.4",
+		"mime-types": "^2.1.35"
+	}
+}
